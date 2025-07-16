@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b, #ffcccb); /* Soft pink to purple gradient */
+            overflow: hidden;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 4rem;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 0, 0, 0.5);
+            margin: 0;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeInZoom 2s forwards;
+        }
+        @keyframes fadeInZoom {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .subtext {
+            font-size: 2rem;
+            margin-top: 20px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: fadeInZoom 2s forwards 0.5s; /* Delay for subtext */
+        }
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .heart {
+            position: absolute;
+            background: rgba(255, 0, 0, 0.7);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation: float 3s infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>I Love You Mere Pyaari Jaaaaana ❤️</h1>
+    <div class="subtext">Aapki khwaish?? 💭</div>
+
+    <div class="hearts"></div>
+
+    <script>
+        // Create floating hearts
+        const heartsContainer = document.querySelector('.hearts');
+        for (let i = 0; i < 30; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = Math.random() * 100 + 'vh';
+            heart.style.animationDuration = Math.random() * 2 + 2 + 's'; // Random duration between 2 and 4 seconds
+            heartsContainer.appendChild(heart);
+        }
+    </script>
+</body>
+</html>

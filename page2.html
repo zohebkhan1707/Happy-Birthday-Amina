@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dil Se... Janamdin Ki Mubarakbaad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      color: #ffc0cb;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://raw.githubusercontent.com/JulianLaval/canvas-space/master/demo/img/stars.png') repeat top center;
+      z-index: 0;
+      animation: moveStars 100s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from {background-position: 0 0;}
+      to {background-position: -10000px 5000px;}
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      font-size: 1.1rem;
+      max-width: 700px;
+      animation: fadeIn 4s ease-in-out;
+      line-height: 1.9;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #ffb6c1;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 12px 24px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff69b4;
+      transition: background 0.3s ease, transform 0.2s;
+      text-decoration: none;
+      z-index: 1;
+    }
+
+    .btn:hover {
+      background: #ff85c1;
+      transform: scale(1.05);
+    }
+
+    audio {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .content {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <h1>Dil Se... Janamdin Ki Mubarakbaad</h1>
+
+  <div class="content">
+    <p>aapki zindagi ka ek aur khoobsurat mod hai... 🌸✨</p>
+    <p>Har subah jo aapko mile... woh naye umeedon se bhari ho... ☀️🌿</p>
+    <p>Har shaam... aapke sapnon ko aur gehra banaaye... 🌙💭</p>
+    <br>
+    <p>Zindagi ne aapko jitni muskurahatein di hain... 😊🌼</p>
+    <p>Main dua karta hoon... woh hazaron guna barh jaayein... 🤲💕</p>
+    <p>Aapka har kadam... khushi ki taraf badhe... 🚶‍♀️🌈</p>
+    <p>Har manzil... aapke liye asaan ho jaaye... 🛤️🌟</p>
+    <br>
+    <p>Aap jaise log iss duniya mein kam hote hain... 🌍🤍</p>
+    <p>Jo muskurakar... dusron ki zindagi roshan karte hain... 💡❤️</p>
+    <p>Aapki har khushi... mere liye ek tohfa hai... 🎁🥰</p>
+    <p>Aur aaj ka din... sirf aapke liye khaas hai... 🎂🎉</p>
+    <br>
+    <p>Dil se dua hai... 🤲💫</p>
+    <p>Khushi... sehat... pyaar... aur har wo cheez...</p>
+    <p>Jo aap chahte hain... woh aapko mile... 🌹✨</p>
+    <br>
+    <p>Aur main... hamesha dua mein aapka naam leta rahoon... 📿❤️</p>
+    <br>
+    <p><strong>Janamdin Mubarak ho... Amina... 🎊🎈</strong></p>
+    <p>Aap hamesha khilti rahiye... muskurati rahiye... aur khush rahiye... 😊🌸💕</p>
+  </div>
+
+  <a href="3rd.html" class="btn">Aage Badhen ➡️</a>
+
+  <audio autoplay loop>
+    <source src="https://www.fesliyanstudios.com/play-mp3/387" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+</body>
+</html>
